@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head itemscope itemtype="http://schema.org/WebSite">
+    <meta name="google-site-verification" content="FzQopyckxKtbbqgfhuWqTfTjd4emmUlwIYHYbBZNkR4">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="${request.static_url('niimanga:public/res/Niimanga.ico')}" type="image/x-icon">
+    <link rel="shortcut icon" href="${request.static_url('niimanga:public/res/Niimanga.ico')}" type="image/x-icon">
+    <title itemprop="name">Read Most Complete ${name | n} Online For Free - niimanga.net </title>
+    <meta name="description" content="Read newest ${last_chapter} collection of ${name | n} on the internet, latest updated ${time} including color version and high definition" >
+    <meta property="og:locale" content="en_US" >
+    <meta property="og:type" content="article" >
+    <meta property="og:title" content="Read Most Complete ${name | n} Online For Free - niimanga.net" >
+    <meta property="og:description" content="Read newest ${last_chapter} collection of ${name | n} on the internet, latest updated ${time} including color version and high definition" >
+    <meta property="og:url" content="http://www.niimanga.net${url}" >
+    <meta property="og:site_name" content="niimanga" >
+    <meta property="og:image" content="http://www.niimanga.net/${thumb_url}">
+    <meta name="twitter:card" content="summary_large_image" >
+    <meta name="twitter:description" content="Read newest ${last_chapter} collection of ${name | n} on the internet, latest updated ${time} including color version and high definition" >
+    <meta name="twitter:title" content="Read Most Complete ${name | n} Online For Free - niimanga.net" >
+    <meta name="twitter:domain" content="http://www.niimanga.net${url}" >
+    <meta name="twitter:image" content="http://www.niimanga.net/${thumb_url}">
+    <meta name="twitter:site" content="@niimanga" >
+    <meta name="twitter:creator" content="@niimanga" >
+    <link rel="canonical" href="http://www.niimanga.net${url}" >
+    <link rel="alternate" href="http://www.niimanga.net${url}" >
+    <link rel="publisher" href="https://plus.google.com/109363191390818524400" >
+    <link rel="author" href="Niimanga.net" >
+
+    <link itemprop="url" href="http://www.niimanga.net${url}">
+    <meta property="fb:app_id" content="844212729007674">
+
+</head>
+<body>
+<h1>Read Most Complete ${name | n} Online For Free - niimanga.net</h1>
+
+<div class="card books page left-cover">
+    <div class="card-content">
+        <div class="col-md-2 col-xs-12 cover">
+            <div class="cover-image-container">
+                <div class="cover-outer-align">
+                    <div class="cover-inner-align">
+                        <img class="cover-image"
+                             src="http://www.niimanga.net/${thumb_url}" />
+                    </div>
+                </div>
+            </div>
+    </div>
+
+    <div class="col-md-10 col-xs-12 detail">
+        <h2 class="title" >read ${name | n} online</h2>
+
+        <div class="col-xs-12 subtitle-container">
+            <a class="subtitle" href="#">${authors | n}</a>
+        </div>
+        <div class="col-xs-12 alias">${aka | n}</div>
+        <div class="col-xs-12 genres poros">
+            <div class="tengah">
+                % for tag in tags:
+                    <a href="http://www.niimanga.net/genre/${tag["value"]}">${tag["label"]}</a>
+                % endfor
+            </div>
+        </div>
+        <div class="col-xs-12 updated">${time}</div>
+
+        <div class="col-xs-12 description">
+            <h2>read ${name | n} online</h2>
+            <p>
+                ${description | n}
+            </p>
+        </div>
+    </div>
+</div>
+<div class="title-green" > Chapters </div>
+    <ul>
+    % for ch in chapters:
+        <li><a href="http://www.niimanga.net/chapter/${ch['url']}">read ${ch['name'] | n} online <span>${ch['time']}</span></a></li>
+    % endfor
+    </ul>
+</div>
+</body>
+</html>

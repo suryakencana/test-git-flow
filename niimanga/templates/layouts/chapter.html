@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head itemscope itemtype="http://schema.org/WebSite">
+    <meta name="google-site-verification" content="FzQopyckxKtbbqgfhuWqTfTjd4emmUlwIYHYbBZNkR4">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="${request.static_url('niimanga:public/res/favicon.ico')}" type="image/x-icon">
+    <link rel="shortcut icon" href="${request.static_url('niimanga:public/res/favicon.ico')}" type="image/x-icon">
+    <title itemprop="name">${name | n}</title>
+    <meta name="description" content="${description | n}">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="${name | n}">
+    <meta property="og:description" content="${description | n}">
+    <meta property="og:url" content="http://www.niimanga.net${url}">
+    <meta property="og:site_name" content="niimanga">
+    <meta property="og:image" content="http://www.niimanga.net/${thumb_url}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:description" content="${description | n}">
+    <meta name="twitter:title" content="${name | n}">
+    <meta name="twitter:domain" content="http://www.niimanga.net${url}">
+    <meta name="twitter:image" content="http://www.niimanga.net/${thumb_url}">
+    <meta name="twitter:site" content="@niimanga">
+    <meta name="twitter:creator" content="@suryakencana007">
+    <link rel="canonical" href="http://www.niimanga.net${url}">
+    <link rel="alternate" href="http://www.niimanga.net${url}">
+    <link rel="publisher" href="https://plus.google.com/109363191390818524400">
+    <link rel="author" href="https://twitter.com/@suryakencana007">
+
+    <link itemprop="url" href="http://www.niimanga.net${url}">
+    <meta property="fb:app_id" content="844212729007674">
+
+</head>
+<body>
+<h1>${name | n}</h1>
+
+<div class="description">${description | n}</div>
+<div class="home-series"><a href="http://www.niimanga.net/manga/${series_url}">${name | n}</a></div>
+<div className="reader">
+    <h2>Read ${name} Online</h2>
+
+    <h3>${name} Online</h3>
+
+    <p>
+        Niimanga is your best place to read ${name} Chapter online.
+        You can also go
+        <a href="/directories/26">
+        mangalist</a> to read other series or check
+        <a href="/latest">
+        latest manga updates</a> for new releases
+    </p>
+</div>
+<div className="attention info">
+    <p>Please remember to buy an copy of official volume of
+        ${name} manga to support the author(s) and the orginal publisher,
+        also visit scanlation group and say thanks for ${name} release!
+    </p>
+</div>
+<p className="genres">
+    <b>Genres: </b>
+    ${genres}
+</p>
+
+<p className="tags">
+    <b>Genres: </b>
+    ${genres}
+    <b> Tags: </b>
+    ${name}, read ${name} online, read ${name} english, read ${name} manga, ${name}, ${name} raw manga, ${name} zip, ${name}
+    rar, ${name} megaupload, ${name} volume, ${name} en, ${name} rapidshare, ${name} chap, ${name} chapter, ${name} high
+    quality, ${name} manga scan, ${name} mangastream, ${name} mangafox, ${name} niimanga, ${name} manga reader, ${name}
+    mangareader, ${name}, Manga Scan.
+</p>
+</body>
+</html>

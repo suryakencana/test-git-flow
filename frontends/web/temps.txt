@@ -1,0 +1,123 @@
+"dev": "./node_modules/.bin/webpack-dev-server --inline --content-base ./"
+<div className="ad-left home">
+    <div className="ad-box">
+        <a href="#">
+        <img src="static/res/ad-banner-left.png" className="img-responsive" />
+        </a>
+    </div>
+</div>
+<div className="ad-right home">
+  <div className="ad-box">
+      <a href="#" >
+      <img src="static/res/ad-banner-right.png" className="img-responsive" />
+      </a>
+  </div>
+</div>
+
+var ListItem = React.createClass({
+    render: function() {
+        return <div className="infinite-list-item">
+        List Item {this.props.key}
+        </div>;
+    }
+});
+
+var InfiniteList = React.createClass({
+    getInitialState: function() {
+        return {
+            elements: this.buildElements(0, 20),
+            isInfiniteLoading: false
+        }
+    },
+
+    buildElements: function(start, end) {
+        var elements = [];
+        for (var i = start; i < end; i++) {
+            elements.push(<ListItem key={i}/>)
+        }
+        return elements;
+    },
+
+    handleInfiniteLoad: function() {
+        var that = this;
+        this.setState({
+            isInfiniteLoading: true
+        });
+        setTimeout(function() {
+            var elemLength = that.state.elements.length,
+                newElements = that.buildElements(elemLength, elemLength + 1000);
+            that.setState({
+                isInfiniteLoading: false,
+                elements: that.state.elements.concat(newElements)
+            });
+        }, 2500);
+    },
+
+    elementInfiniteLoad: function() {
+        return <div className="infinite-list-item">
+            Loading...
+        </div>;
+    },
+
+    render: function() {
+        return <Infinite elementHeight={40}
+                         containerHeight={250}
+                         infiniteLoadingBeginBottomOffset={200}
+                         onInfiniteLoad={this.handleInfiniteLoad}
+                         loadingSpinnerDelegate={this.elementInfiniteLoad()}
+                         isInfiniteLoading={this.state.isInfiniteLoading}
+                         >
+            {elements}
+        </Infinite>;
+    }
+});
+
+React.renderComponent(<InfiniteList/>,
+        document.getElementById('react-example-one'));
+
+<form className="search-nav" role="search" onSubmit={ this.handleSearch } >
+
+                            <div className="search-wrapper">
+                                <div className="search-parent">
+                                    <input className="form-control" onChange={this.handleChange} type="text" value={this.state.query} placeholder="Searching series name..."/>
+                                    <span className="btn-search-wrapper">
+                                        <button className="btn btn-search" type="submit">
+                                            <i className="fa fa-search fa-fw"></i>
+                                        </button>
+                                    </span>
+                                </div>
+                            </div>
+                        </form>
+
+  <SearchBox 
+                     types="submit"
+                     onQueryChange={this.handleChange}
+                     onQuerySubmit={this.handleSearch}
+                     query={this.state.query}
+                     />                     
+
+                       <ul>
+            <li><Link className="link-cover" to="/">
+            <i className="fa fa-home fa-fw"></i><span>Home</span></Link></li>
+            <li><Link className="link-cover" to="/">
+            <i className="fa fa-tags fa-fw"></i><span>Genres</span></Link></li>
+            <li><Link className="link-cover" to="latest" >
+            <i className="fa fa-rss fa-fw"></i> Latest Manga</Link>
+            </li>
+            <li><Link className="link-cover" to="popular" >
+            <i className="fa fa-fire fa-fw"></i>Hot Manga</Link>
+            </li>            
+            </ul>
+
+https://www.facebook.com/sharer/sharer.php?u=http://www.niimanga.net&display=popup&ref=plugin&src=share_button&app_id=113869198637480
+
+https://twitter.com/intent/tweet?text="Monster No Iru Nichijou Release Update Chapter"&url=http://www.niimanga.net/chapter/bt-monster-musume-no-iru-nichijou/bt-monster-musume-no-iru-nichijou-ch-35-read-online%2F&&via=niimanga
+
+https://twitter.com/intent/tweet/complete?text="awesome%20read%20manga%20online%20free"&url=http%3A%2F%2Fwww.niimanga.net%2F&via=niimanga%2F&latest_status_id=631397333624721408
+
+
+#toolbarSensor {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)"; /* IE 8 */
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0); /* IE 7 and olders */
+  opacity:0;
+}

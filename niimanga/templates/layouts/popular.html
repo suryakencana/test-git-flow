@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head itemscope="" itemtype="http://schema.org/WebSite">
+    <meta name="description" content="Read Most Popular Manga Online, Color Version and Download Available" data-react-helmet="true">
+    <meta property="og:locale" content="en_US" data-react-helmet="true">
+    <meta property="og:type" content="article" data-react-helmet="true">
+    <meta property="og:title" content="Read Most Popular Manga Online - niimanga.net" data-react-helmet="true">
+    <meta property="og:description" content="Read Most Popular Manga Online, Color Version and Download Available" data-react-helmet="true">
+    <meta property="og:url" content="http://www.niimanga.net/popular" data-react-helmet="true">
+    <meta property="og:site_name" content="Niimanga.net" data-react-helmet="true">
+    <meta property="og:image" content="http://niimanga.net/static/share.png" data-react-helmet="true">
+    <meta name="twitter:card" content="summary_large_image" data-react-helmet="true">
+    <meta name="twitter:description" content="Read Most Popular Manga Online, Color Version and Download Available" data-react-helmet="true">
+    <meta name="twitter:title" content="Read Most Popular Manga Online - niimanga.net" data-react-helmet="true">
+    <meta name="twitter:domain" content="Niimanga.net" data-react-helmet="true">
+    <meta name="twitter:image" content="http://niimanga.net/static/share.png" data-react-helmet="true">
+    <meta name="twitter:creator" content="@niimanga" data-react-helmet="true">
+    <meta name="twitter:site" content="@niimanga" data-react-helmet="true">
+    <link rel="canonical" href="http://www.niimanga.net/popular" data-react-helmet="true">
+    <link rel="alternate" href="http://www.niimanga.net/popular" data-react-helmet="true">
+    <link rel="publisher" href="https://plus.google.com/109363191390818524400" data-react-helmet="true">
+    <link rel="author" href="https://twitter.com/@niimanga" data-react-helmet="true">
+    <link rel="url" href="http://www.niimanga.net/popular" data-react-helmet="true">
+    <meta name="google-site-verification" content="FzQopyckxKtbbqgfhuWqTfTjd4emmUlwIYHYbBZNkR4">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="http://www.niimanga.net/static/res/Niimanga.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="http://www.niimanga.net/static/res/Niimanga.ico" type="image/x-icon">
+    <meta name="fragment" content="!">
+    <meta property="fb:app_id" content="844212729007674">
+    <title>Read Most Popular Manga Online - niimanga.net</title>
+</head>
+<body>
+<h1>Read Most Popular Manga Online - niimanga.net</h1>
+<div class="row">
+    <div class="manga-list">
+        <div class="title-green">Read Most Popular Manga Online List - niimanga.net </div>
+        % for series in cards:
+        <div>
+            <a href="http://www.niimanga.net/manga/${series['origin']}">Read Manga ${series['name']} Online</a>
+            <div>${series['time']}</div>
+            <div>
+                <a href="http://www.niimanga.net/chapter/${series['last_url']}">${series['last_chapter']}</a>
+            </div>
+        </div>
+        % endfor
+    </div>
+</div>
+</body>
+</html>
